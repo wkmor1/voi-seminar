@@ -2,7 +2,7 @@
 title: "The Value of Information"
 subtitle: "for Conservation & Natural Resource Management"
 author: "Will Morris"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+date: "19 September 2017"
 output:
   xaringan::moon_reader:
     lib_dir: libs
