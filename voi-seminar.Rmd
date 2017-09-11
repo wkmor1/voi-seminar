@@ -6,6 +6,7 @@ date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   xaringan::moon_reader:
     lib_dir: libs
+    css: ["default", "voi-seminar.css"]
     nature:
       highlightStyle: github
       highlightLines: true
@@ -23,7 +24,6 @@ class: inverse, center, middle
 ???
 
 
-
 ---
 # Formal VOI
 
@@ -33,9 +33,7 @@ class: inverse, center, middle
 
 --
 
-.center[
 $\Large\mathrm{EVI} = \mathrm{EVWNI} - \mathrm{EVWOI}$
-]
 
 --
 
@@ -43,21 +41,309 @@ $\Large\mathrm{EVI} = \mathrm{EVWNI} - \mathrm{EVWOI}$
 
 --
 
-.center[
 $\Large\mathrm{EVWOI} = \max_a\mathrm{E}_s[v(a,s)]$
-]
 
 ???
 
 
 ---
-# Many Forms of EVI
+# Formal VOI
 
 --
 
-.center[
+## Many Forms of VOI
+
+--
+
 $\Large\mathrm{EV?I} = \mathrm{EVW?I} - \mathrm{EVWOI}$
+
+--
+
+## Expected Value of Perfect Information (EVPI)
+
+--
+
+$\Large\mathrm{EVPI} = \mathrm{EVWPI} - \mathrm{EVWOI}$
+
+--
+
+$\Large\mathrm{EVPI} = \mathrm{E}_s\max_a[v(a,s)] - \max_a\mathrm{E}_s[v(a,s)]$
+
+???
+
+
+
+---
+# An example 
+
+--
+- .font130[Manager responsible for endangered species]
+
+--
+- .font130[Currently 10 breeding pairs, but declining]
+
+--
+- .font130[Must choose whether or not to restore habitat]
+
+--
+- .font130[50% chance that restoration will be a success]
+
+--
+- .font130[Expected number of breeding pairs:]
+
+</br>
+
+.font110[
+
+| Action     | Failure | Success |
+|:-----------|:-------:|:-------:|
+| Do nothing |    8    |    8    |
+| Restore    |    5    |    15   |
 ]
+
+???
+
+
+
+---
+count: false
+# An example
+
+.font130[
+- Manager responsible for endangered species
+- Currently 10 breeding pairs, but declining
+- Must choose whether or not to restore habitat
+- 50% chance that restoration will be a success
+- Expected number of breeding pairs:
+]
+</br>
+.font110[
+
+| Action     | Failure | Success | _EV_ |
+|:-----------|:-------:|:-------:|:----:|
+| Do nothing |    8    |    8    | _8_  |
+| Restore    |    5    |    15   | _10_ |
+]
+
+--
+
+$\Large\mathrm{EVWOI} = \max_a\mathrm{E}_s[v(a,s)]$
+
+???
+
+
+
+---
+count: false
+# An example
+
+.font130[
+- Manager responsible for endangered species
+- Currently 10 breeding pairs, but declining
+- Must choose whether or not to restore habitat
+- 50% chance that restoration will be a success
+- Expected number of breeding pairs:
+]
+</br>
+.font110[
+
+| Action     | Failure | Success | _EV_ |
+|:-----------|:-------:|:-------:|:----:|
+| Do nothing |    8    |    8    | .red[_8_]  |
+| Restore    |    5    |    15   | .red[_10_] |
+]
+
+$\Large\mathrm{EVWOI} =\max_a$ .font150[(.red[8], .red[10])]
+
+???
+
+
+
+---
+count: false
+# An example
+
+.font130[
+- Manager responsible for endangered species
+- Currently 10 breeding pairs, but declining
+- Must choose whether or not to restore habitat
+- 50% chance that restoration will be a success
+- Expected number of breeding pairs:
+]
+</br>
+.font110[
+
+| Action     | Failure | Success | _EV_ |
+|:-----------|:-------:|:-------:|:----:|
+| Do nothing |    8    |    8    | _8_  |
+| Restore    |    5    |    15   | .red[_10_] |
+]
+
+$\Large\mathrm{EVWOI} =$ .font150.red[10]
+
+???
+
+
+
+---
+count: false
+# An example
+
+.font130[
+- Manager responsible for endangered species
+- Currently 10 breeding pairs, but declining
+- Must choose whether or not to restore habitat
+- 50% chance that restoration will be a success
+- Expected number of breeding pairs:
+]
+</br>
+.font110[
+
+| Action     | Failure | Success | _EV_ |
+|:-----------|:-------:|:-------:|:----:|
+| Do nothing |    8    |    8    | _8_  |
+| Restore    |    5    |    15   | .red[_10_] |
+]
+
+$\Large\mathrm{EVPI} = \mathrm{EVWPI} -$ .font150.red[10]
+
+???
+
+
+
+---
+count: false
+# An example
+
+.font130[
+- Manager responsible for endangered species
+- Currently 10 breeding pairs, but declining
+- Must choose whether or not to restore habitat
+- 50% chance that restoration will be a success
+- Expected number of breeding pairs:
+]
+</br>
+.font110[
+
+| Action     | Failure | Success | _EV_ |
+|:-----------|:-------:|:-------:|:----:|
+| Do nothing |    8    |    8    | _8_  |
+| Restore    |    5    |    15   | .red[_10_] |
+]
+
+$\Large\mathrm{EVPI} = \mathrm{E}_s\max_a[v(a,s)] -$ .font150.red[10]
+
+???
+
+
+
+---
+count: false
+# An example
+
+.font130[
+- Manager responsible for endangered species
+- Currently 10 breeding pairs, but declining
+- Must choose whether or not to restore habitat
+- 50% chance that restoration will be a success
+- Expected number of breeding pairs:
+]
+</br>
+.font110[
+
+| Action     | Failure | Success | _EV_ |
+|:-----------|:-------:|:-------:|:----:|
+| Do nothing |    .blue[8]    |     8   | _8_  |
+| Restore    |    5    |    .blue[15]   | .red[_10_] |
+]
+
+$\Large\mathrm{EVPI} = \mathrm{E}_s$.font150[(.blue[8], .blue[15]) - .red[10]]
+
+???
+
+
+
+---
+count: false
+# An example
+
+.font130[
+- Manager responsible for endangered species
+- Currently 10 breeding pairs, but declining
+- Must choose whether or not to restore habitat
+- 50% chance that restoration will be a success
+- Expected number of breeding pairs:
+]
+</br>
+.font110[
+
+| Action     | Failure | Success | _EV_ |
+|:-----------|:-------:|:-------:|:----:|
+| Do nothing |    .blue[8]    |     8   | _8_  |
+| Restore    |    5    |    .blue[15]   | .red[_10_] |
+]
+
+$\Large\mathrm{EVPI} =$ .font150[.blue[11.5] - .red[10]]
+
+???
+
+
+
+---
+count: false
+# An example
+
+.font130[
+- Manager responsible for endangered species
+- Currently 10 breeding pairs, but declining
+- Must choose whether or not to restore habitat
+- 50% chance that restoration will be a success
+- Expected number of breeding pairs:
+]
+</br>
+.font110[
+
+| Action     | Failure | Success | _EV_ |
+|:-----------|:-------:|:-------:|:----:|
+| Do nothing |    .blue[8]    |     8   | _8_  |
+| Restore    |    5    |    .blue[15]   | .red[_10_] |
+]
+
+$\Large\mathrm{EVPI} =$ .font150.purple[1.5]
+
+???
+
+
+
+---
+# Formal VOI
+
+--
+
+## Expected Value of Sample Information
+
+--
+
+$\Large\mathrm{EVSI} = \mathrm{EVWSI} - \mathrm{EVWOI}$
+
+--
+
+$\Large\mathrm{EVSI} = \mathrm{E}_x[\max_a\mathrm{E}_{s|x}[v(a,s)]] - \max_a\mathrm{E}_s[v(a,s)]$
+
+
+???
+
+---
+class: centre, middle
+
+```{r dimretplot, fig.width = 4, fig.height = 3, dev = "svg", echo = FALSE, out.width = "1200px", dev.args = list(family = "Latin Modern Roman")}
+par(mar = c(3, 3, 1, 1))
+curve(x / (x + 1), 0, 10, xlab = "", xaxt = 'n', ylab = "", yaxt = "n", ylim = 0:1, lwd = 2)
+abline(h = 1, lty = 2)
+text(0.5, 1, "EVPI", pos = 1)
+mtext("Sample-size", 1, 1)
+mtext("EVSI", 2, 1)
+```
 
 ---
 class: inverse, center, middle
@@ -70,6 +356,32 @@ class: inverse, center, middle
 
 
 ---
+# Two flavours of VOI in conservation science
+
+--
+
+.pull-left[
+## 1. Informal VOI analyses
+
+- Don't use classic VOI (EVPI, etc.,)
+- Post-hoc reevaluation of decision problems with different data
+- Typically applied to spatial conservation planning (e.g., reserve network design)
+- Somewhat hidden in literature as dont use a standard lexicon
+- Often report a large value of information
+]
+--
+
+.pull-right[
+## 2. Formal VOI Analyses 
+
+- Use one or more forms of EV?I in the strict sense
+- Almost always calculate the EVPI
+- Often applied to problems of managing a species (e.g., fishery, invasive plant)
+- Easier to find in literature
+- Typically report a low value of information
+]
+
+---
 class: inverse, center, middle
 
 # Part 3: A Case-study
@@ -77,6 +389,7 @@ class: inverse, center, middle
 
 ???
 
+---
 
 
 ---
