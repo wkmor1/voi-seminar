@@ -396,6 +396,174 @@ class: inverse, center, middle
 
 ???
 
+
+
+---
+class: bottom
+background-image: url(voi-seminar_files/figure-html/simpleZon1.svg)
+
+.font150[Threatened species unevenly distributed across landscape divided into 25 units]</br></br></br></br>
+
+???
+
+
+
+---
+count: false
+class: bottom
+background-image: url(voi-seminar_files/figure-html/simpleZon2.svg)
+
+.font150[Second species with different distribution in the same landscape]</br></br></br></br>
+
+
+???
+
+
+---
+count: false
+class: bottom
+background-image: url(voi-seminar_files/figure-html/simpleZon3.svg)
+
+.font150[Conservation prioritization: rank each unit according to biodiversity value]</br></br></br></br>
+
+???
+
+
+
+---
+count: false
+class: bottom
+background-image: url(voi-seminar_files/figure-html/simpleZon4.svg)
+
+.font150[Assuming budget only large enough to conserve one unit. Pick one that maximises the average remaining (species have equal weights)]</br></br></br></br>
+
+???
+
+
+
+---
+count: false
+class: right, middle
+background-image: url(voi-seminar_files/figure-html/simpleZon5.svg)
+
+</br></br>Uncertainty in form </br>of second possible </br>scenario for same</br>landscape
+
+???
+
+
+
+---
+count: false
+class: right, middle
+background-image: url(voi-seminar_files/figure-html/simpleZon6.svg)
+
+</br></br>Different distribution</br>= different ranking
+
+</br></br>What is the expected</br>value of knowing</br>which scenario is</br>correct?
+
+???
+
+
+
+---
+count: false
+class: right, middle
+background-image: url(voi-seminar_files/figure-html/simpleZon6.svg)
+
+$\mathrm{EVPI} = \mathrm{EVWPI} - \mathrm{EVWOI}$
+
+???
+
+
+
+---
+count: false
+class: right, middle
+background-image: url(voi-seminar_files/figure-html/simpleZon6.svg)
+
+$\mathrm{EVPI} = \mathrm{EVWPI} - \max_a\mathrm{E}_s[v(a,s)]$
+
+???
+
+
+
+---
+count: false
+class: right, middle
+background-image: url(voi-seminar_files/figure-html/simpleZon7.svg)
+
+$\mathrm{EVPI} = \mathrm{EVWPI} - \max_a$(.red[6%], .red[?%])
+
+???
+
+
+
+---
+count: false
+class: right, middle
+background-image: url(voi-seminar_files/figure-html/simpleZon8.svg)
+
+$\mathrm{EVPI} = \mathrm{EVWPI} - \max_a$(.red[6%], .red[5%])
+
+???
+
+
+
+---
+count: false
+class: right, middle
+background-image: url(voi-seminar_files/figure-html/simpleZon7.svg)
+
+$\mathrm{EVPI} = \mathrm{EVWPI} -$ .red[6%]
+
+???
+
+
+
+---
+count: false
+class: right, middle
+background-image: url(voi-seminar_files/figure-html/simpleZon9.svg)
+
+$\mathrm{EVPI} = \mathrm{E}_s\max_a[v(a,s)] -$ .red[6%]
+
+???
+
+
+
+---
+count: false
+class: right, middle
+background-image: url(voi-seminar_files/figure-html/simpleZon9.svg)
+
+$\mathrm{EVPI} = \mathrm{E}_s$(.blue[7%], .blue[7%]) - .red[6%]
+
+???
+
+
+
+---
+count: false
+class: right, middle
+background-image: url(voi-seminar_files/figure-html/simpleZon9.svg)
+
+$\mathrm{EVPI}$ = .blue[7%] - .red[6%]
+
+???
+
+
+
+---
+count: false
+class: right, middle
+background-image: url(voi-seminar_files/figure-html/simpleZon9.svg)
+
+$\mathrm{EVPI}$ = .purple[1%]
+
+???
+
+
+
 ---
 background-image: url(voi-seminar_files/figure-html/HunterSpeciesModels.svg)
 
