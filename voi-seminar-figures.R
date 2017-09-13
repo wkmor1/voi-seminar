@@ -123,4 +123,21 @@ lapply(
       system_fonts = list(serif = "Droid Serif")
     )
   }
-)     
+)
+
+pdftools::pdf_render_page(
+  "http://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0059662&type=printable",
+  page = 1, dpi = 96, numeric = FALSE) %>%
+magick::image_read() %>%
+magick::image_chop("x800+0+200") %>%
+magick::image_resize("1000x") %>%
+magick::image_write("voi-seminar_files/figure-html/hermoso.png", "png")
+
+pdftools::pdf_render_page(
+  "http://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0059662&type=printable",
+  page = 6, dpi = 180, numeric = FALSE) %>%
+magick::image_read() %>%
+magick::image_crop("750x600+0+1100") %>%
+magick::image_resize("650x350!") %>%
+magick::image_write("voi-seminar_files/figure-html/hermoso-plot.png", "png")
+

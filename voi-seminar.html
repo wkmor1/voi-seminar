@@ -30,23 +30,26 @@ class: inverse, center, middle
 
 
 ---
-# Formal VOI
+# Value of information (VOI)
 
 --
+- .font120[Both a concept and a formal decision theoretic toolset]
 
-## Expected Value of Information (EVI)
-
---
-
-`\(\Large\mathrm{EVI} = \mathrm{EVWNI} - \mathrm{EVWOI}\)`
 
 --
+- .font120[In context of decision making, information has some finite value]
 
-## Expected Value With Original Information (EVWOI)
 
 --
+- .font120[Can tell you whether to seek new information, how much, and what kind]
 
-`\(\Large\mathrm{EVWOI} = \max_a\mathrm{E}_s[v(a,s)]\)`
+
+--
+- .font120[Implies some uncertainty is critical to decision making and some is not]
+
+
+--
+- .font120[Most useful if can compare the cost of new information to the value in same currency]
 
 ???
 
@@ -56,6 +59,50 @@ class: inverse, center, middle
 
 --
 
+## Expected Value of Information (EVI)
+
+--
+Difference between:
+- Expected value of making decision with __original__ information (EVWOI)
+
+and the
+
+- Expected value of making decision with __new__ information (EVWNI)
+
+
+--
+&lt;/br&gt;
+&lt;/br&gt;
+`\(\Large\mathrm{EVI} = \mathrm{EVWNI} - \mathrm{EVWOI}\)`
+
+???
+
+
+
+---
+# Formal VOI
+
+## Expected Value With Original Information (EVWOI)
+
+--
+
+
+`\(\Large\mathrm{EVWOI} = \max_a\mathrm{E}_\theta[v(a,\theta)]\)`
+
+
+--
+
+`\(\Large a\)` = actions, alternatives etc
+
+--
+
+`\(\Large\theta\)` = uncertainty, model, system state
+
+???
+
+
+---
+# Formal VOI
 ## Many Forms of VOI
 
 --
@@ -72,7 +119,7 @@ class: inverse, center, middle
 
 --
 
-`\(\Large\mathrm{EVPI} = \mathrm{E}_s\max_a[v(a,s)] - \max_a\mathrm{E}_s[v(a,s)]\)`
+`\(\Large\mathrm{EVPI} = \mathrm{E}_\theta\max_a[v(a,\theta)] - \max_a\mathrm{E}_\theta[v(a,\theta)]\)`
 
 ???
 
@@ -108,7 +155,7 @@ class: inverse, center, middle
 --
 &lt;/br&gt;
 &lt;/br&gt;
-`\(\Large\mathrm{EVWOI} = \max_a\mathrm{E}_s[v(a,s)]\)`
+`\(\Large\mathrm{EVWOI} = \max_a\mathrm{E}_\theta[v(a,\theta)]\)`
 
 ???
 
@@ -220,7 +267,7 @@ count: false
 ]
 &lt;/br&gt;
 &lt;/br&gt;
-`\(\Large\mathrm{EVPI} = \mathrm{E}_s\max_a[v(a,s)] -\)` .font150.red[10]
+`\(\Large\mathrm{EVPI} = \mathrm{E}_\theta\max_a[v(a,\theta)] -\)` .font150.red[10]
 
 ???
 
@@ -248,7 +295,7 @@ count: false
 ]
 &lt;/br&gt;
 &lt;/br&gt;
-`\(\Large\mathrm{EVPI} = \mathrm{E}_s\)`.font150[(.blue[8], .blue[15]) - .red[10]]
+`\(\Large\mathrm{EVPI} = \mathrm{E}_\theta\)`.font150[(.blue[8], .blue[15]) - .red[10]]
 
 ???
 
@@ -311,6 +358,29 @@ count: false
 
 
 ---
+# Implications
+
+
+--
+- Risk-neutral decision-maker with original information expects to maintain current population.
+
+
+--
+- In reality, either lose 5 or gain 5, with equal probability. But better than guaranteed loss of 2.
+
+
+--
+- Acting with certainty expect to gain 1.5 as can avoid the worst case of losing 5.
+
+
+--
+- Is therefore optimal to spend up to value of 1.5 breeding pairs worth of resources to find out! 
+
+???
+
+
+
+---
 # Formal VOI
 
 --
@@ -324,7 +394,7 @@ count: false
 
 --
 
-`\(\Large\mathrm{EVSI} = \mathrm{E}_x[\max_a\mathrm{E}_{s|x}[v(a,s)]] - \max_a\mathrm{E}_s[v(a,s)]\)`
+`\(\Large\mathrm{EVSI} = \mathrm{E}_s[\max_a\mathrm{E}_{\theta|s}[v(a,s)]] - \max_a\mathrm{E}_\theta[v(a,\theta)]\)`
 
 
 ???
@@ -333,6 +403,34 @@ count: false
 class: centre, middle
 
 &lt;img src="voi-seminar_files/figure-html/dimretplot-1.svg" width="1200px" /&gt;
+
+---
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;
+- .font130[Both concept and formal toolset]
+
+
+--
+- .font130[Difference between value with original and new information]
+
+
+--
+- .font130[Many forms of EVI. But EVWOI is common to all]
+
+
+--
+- .font130[EVPI is the upper bound]
+
+
+--
+- .font130[EVSI is the general case]
+
+
+--
+- .font130[The value of information gives diminishing returns]
+
+???
+
+
 
 ---
 class: inverse, center, middle
@@ -353,9 +451,17 @@ class: inverse, center, middle
 ## 1. Informal VOI analyses
 
 - Don't use classic VOI (EVPI, etc.,)
+
+
 - Post-hoc reevaluation of decision problems with different data
+
+
 - Typically applied to spatial conservation planning (e.g., reserve network design)
+
+
 - Somewhat hidden in literature as don't use a standard lexicon
+
+
 - Typically report a large value of information
 ]
 --
@@ -364,23 +470,55 @@ class: inverse, center, middle
 ## 2. Formal VOI Analyses 
 
 - Use one or more forms of EVI in the strict sense
+
+
 - Almost always calculate the EVPI
+
+
 - Typically applied to managing a species (e.g., fishery, invasive plant)
+
+
 - Easier to find in literature
+
+
 - Typically report a low value of information
 ]
 
 ---
-# Informal VOI in Spatial Conservation Planning
+# Informal VOI in Conservation Planning
 
 --
-- .font120[Comparison of data quantity (full species occurrence dataset vs. subset)]
+- .font120[Comparison of data quantity (full vs. subset)]
+
 
 --
-- .font120[Comparison of data quality (fine resolution data vs. coarse)]
+- .font120[Comparison of data quality (fine resolution vs. coarse)]
+
 
 --
-- .font120[Span a wide range systems ()]
+- .font120[Span a wide range systems (coutry-wide reserve networks, forest stocks, fisheries, etc.,)]
+
+
+--
+- .font120[Narrow objectives (maximally represent or retain distribution of biodiversity feature or achieve target level of protection)]
+
+
+--
+- .font120[Typically do decision making with planning software such Marxan or Zonation]
+
+
+--
+- .font120[Actions are choose among a set of candidate areas for protection or other conservation action]
+
+
+???
+
+
+
+---
+
+![hermoso](voi-seminar_files/figure-html/hermoso.png)
+![hermoso_plot](voi-seminar_files/figure-html/hermoso-plot.png)
 
 ???
 
@@ -479,7 +617,7 @@ count: false
 class: right, middle
 background-image: url(voi-seminar_files/figure-html/simpleZon6.svg)
 
-`\(\mathrm{EVPI} = \mathrm{EVWPI} - \max_a\mathrm{E}_s[v(a,s)]\)`
+`\(\mathrm{EVPI} = \mathrm{EVWPI} - \max_a\mathrm{E}_\theta[v(a,\theta)]\)`
 
 ???
 
@@ -523,7 +661,7 @@ count: false
 class: right, middle
 background-image: url(voi-seminar_files/figure-html/simpleZon9.svg)
 
-`\(\mathrm{EVPI} = \mathrm{E}_s\max_a[v(a,s)] -\)` .red[6%]
+`\(\mathrm{EVPI} = \mathrm{E}_\theta\max_a[v(a,\theta)] -\)` .red[6%]
 
 ???
 
@@ -534,7 +672,7 @@ count: false
 class: right, middle
 background-image: url(voi-seminar_files/figure-html/simpleZon9.svg)
 
-`\(\mathrm{EVPI} = \mathrm{E}_s\)`(.blue[7%], .blue[7%]) - .red[6%]
+`\(\mathrm{EVPI} = \mathrm{E}_\theta\)`(.blue[7%], .blue[7%]) - .red[6%]
 
 ???
 

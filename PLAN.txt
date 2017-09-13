@@ -1,0 +1,45 @@
+*- Title 
+
+*- Part 1
+*- General VOI intro (bullet points)
+*- Formal VOI (EVI)
+*- Formal VOI (EVWOI)
+*- Formal VOI (Many forms, EVPI)
+*- Simple example
+*- Implications
+*- Formal VOI (EVSI)
+*- EVPI graphic
+*- Take home messages
+
+*- Part 2
+*- Two flavours (Informal, Formal)
+*- Informal (conservation planning)
+*- Example (Hermoso)
+- Formal (managing a population)
+- Example (Runge)
+- Revisit EVSI graph (explain discrepency) 
+- Problems with the informal approach (straw man, after-the-fact)
+- Take home messages
+
+*-Part 3
+- General intro to VOI for conservation planning
+*- Simple example
+- Intro to hunter problem
+- Species
+*- Species maps
+*- An initial plan ignoring the uncertainty
+- How to calculate the EVPI (overview of methods and the result)
+- results for diff species
+*- Ice cream plot
+*- Priorty map split into cone, ice-cream and cherry
+- Take home messages
+
+
+*-Part 4
+- revisit first example (now let probability of success vary)
+- expected value vs. p 
+- intro risk, utility and expected utility
+- EUPI for risk-neutral vs. risk averse
+- Take home messages
+
+- Thank you
