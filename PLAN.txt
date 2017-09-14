@@ -1,7 +1,9 @@
 *- Title 
 
-*- Part 1
 *- General VOI intro (bullet points)
+*- My thesis
+
+*- Part 1
 *- Formal VOI (EVI)
 *- Formal VOI (EVWOI)
 *- Formal VOI (Many forms, EVPI)
@@ -23,17 +25,17 @@
 *- Take home messages
 
 *-Part 3
-- General intro to VOI for conservation planning
+*- General intro to VOI for conservation planning
 *- Simple example
-- Intro to hunter problem
-- Species
+*- Intro to hunter problem
+*- How to calculate the EVPI (overview of methods and the result)
+*- Species
 *- Species maps
 *- An initial plan ignoring the uncertainty
-- How to calculate the EVPI (overview of methods and the result)
-- results for diff species
+*- results for diff species
 *- Ice cream plot
 *- Priorty map split into cone, ice-cream and cherry
-- Take home messages
+*- Take home messages
 
 *-Part 4
 - revisit first example (now let probability of success vary)
