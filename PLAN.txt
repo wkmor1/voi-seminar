@@ -16,10 +16,11 @@
 *- Informal (conservation planning)
 *- Example (Hermoso)
 *- Formal (managing a population)
-- Example (Runge)
-- Revisit EVSI graph (explain discrepency) 
-- Problems with the informal approach (straw man, after-the-fact)
-- Take home messages
+*- Example (Runge)
+*- Two flavours (high value, low) 
+*- Revisit EVSI graph (explain discrepency) 
+*- Problems with the informal approach (straw man, after-the-fact)
+*- Take home messages
 
 *-Part 3
 - General intro to VOI for conservation planning
@@ -33,7 +34,6 @@
 *- Ice cream plot
 *- Priorty map split into cone, ice-cream and cherry
 - Take home messages
-
 
 *-Part 4
 - revisit first example (now let probability of success vary)
