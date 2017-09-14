@@ -130,6 +130,7 @@ pdftools::pdf_render_page(
   page = 1, dpi = 96, numeric = FALSE) %>%
 magick::image_read() %>%
 magick::image_chop("x800+0+200") %>%
+magick::image_crop("700x254+50+0") %>%
 magick::image_resize("1000x") %>%
 magick::image_write("voi-seminar_files/figure-html/hermoso.png", "png")
 
@@ -137,7 +138,24 @@ pdftools::pdf_render_page(
   "http://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0059662&type=printable",
   page = 6, dpi = 180, numeric = FALSE) %>%
 magick::image_read() %>%
-magick::image_crop("750x600+0+1100") %>%
-magick::image_resize("650x350!") %>%
+magick::image_crop("400x600+150+1100") %>%
+magick::image_resize("300x300!") %>%
 magick::image_write("voi-seminar_files/figure-html/hermoso-plot.png", "png")
+
+pdftools::pdf_render_page(
+  "https://www.researchgate.net/profile/James_Lyons8/publication/216770891_Which_uncertainty_Using_expert_elicitation_and_expcetd_value_of_information_to_design_an_adaptive_program/links/568ee19f08aef987e567e367.pdf",
+  page = 3, dpi = 96, numeric = FALSE) %>%
+magick::image_read() %>%
+magick::image_crop("720x270+20+120") %>%
+magick::image_resize("1000x") %>%
+magick::image_write("voi-seminar_files/figure-html/runge.png", "png")
+
+pdftools::pdf_render_page(
+  "https://www.researchgate.net/profile/James_Lyons8/publication/216770891_Which_uncertainty_Using_expert_elicitation_and_expcetd_value_of_information_to_design_an_adaptive_program/links/568ee19f08aef987e567e367.pdf",
+  page = 9, dpi = 180, numeric = FALSE) %>%
+magick::image_read() %>%
+magick::image_crop("600x420+100+1150") %>%
+magick::image_resize("300x300!") %>%
+magick::image_write("voi-seminar_files/figure-html/runge-plot.png", "png")
+
 

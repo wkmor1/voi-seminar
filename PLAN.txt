@@ -15,7 +15,7 @@
 *- Two flavours (Informal, Formal)
 *- Informal (conservation planning)
 *- Example (Hermoso)
-- Formal (managing a population)
+*- Formal (managing a population)
 - Example (Runge)
 - Revisit EVSI graph (explain discrepency) 
 - Problems with the informal approach (straw man, after-the-fact)

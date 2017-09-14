@@ -521,7 +521,67 @@ class: inverse, center, middle
 ---
 
 ![hermoso](voi-seminar_files/figure-html/hermoso.png)
-![hermoso_plot](voi-seminar_files/figure-html/hermoso-plot.png)
+
+.pull-left[![hermoso_plot](voi-seminar_files/figure-html/hermoso-plot.png)]
+
+.pull-right[
+
+Conservation plans for freshwater fish in northern Australia.
+
+Plans with 15, 55, and 85% of full distribution dataset.
+
+More than double the effectiveness of plan when using 85% compared to 15% (measured as number of species exceeding target level of protection)
+
+]
+
+
+???
+
+
+
+---
+# Formal VOI for species management
+
+--
+- .font120[Early examples often focused on commercial fisheries]
+
+
+--
+- .font120[Recent examples focus on wider management contexts (threatened species recovery, wildlife harvest, invasives control)]
+
+
+--
+- .font120[Bias towards the management of animals (some examples on the management of invasive plants)]
+
+
+--
+- .font120[Decision problem well formulated: objectives, alternatives, system model, etc.]
+
+
+--
+- .font120[Typically use a population model or sometimes expert opinion to predict outcomes]
+
+
+--
+- .font120[Use a variety of the forms of EVI but always at least report EVPI]
+
+
+???
+
+
+
+---
+
+![runge](voi-seminar_files/figure-html/runge.png)
+
+.pull-left[![runge-plot](voi-seminar_files/figure-html/runge-plot.png)]
+
+.pull-right[
+
+
+
+]
+
 
 ???
 
