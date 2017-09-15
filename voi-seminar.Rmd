@@ -452,7 +452,7 @@ mtext("EVSI", 2, 1)
 
 
 ---
-</br></br></br>
+</br>
 - .font130[VOI both concept and formal toolset]
 
 
@@ -466,10 +466,6 @@ mtext("EVSI", 2, 1)
 
 --
 - .font130[EVPI is the upper bound]
-
-
---
-- .font130[EVSI is the general case]
 
 
 --
@@ -787,7 +783,7 @@ mtext("EVSI", 2, 1)
 
 
 ---
-</br></br></br>
+</br>
 - .font130[Two flavors of VOI: Informal and formal]
 
 
@@ -805,6 +801,10 @@ mtext("EVSI", 2, 1)
 
 --
 - .font130[There are problems with the informal approach and conservation planning may benefit from using formal VOI]
+
+.center[![problem](https://media.giphy.com/media/8wGbjEEGArmTK/giphy.gif)]
+
+
 
 ???
 
@@ -1225,4 +1225,338 @@ class: inverse, center, middle
 
 ???
 
+
+
+---
+# Back to this example 
+
+- .font110[Manager responsible for endangered species]
+
+
+- .font110[Currently 10 breeding pairs, but declining]
+
+
+- .font110[Must choose whether or not to restore habitat]
+
+
+- .font110[Payoff matrix:]
+
+</br>
+.font110[
+
+| Action     | Failure | Success |
+|:-----------|:-------:|:-------:|
+| Do nothing |    8    |    8    |
+| Restore    |    5    |    15   |
+]
+
+--
+</br>
+- .font110[Now suppose the probability of failure,] $\large{}p$, .font110[varies]
+
+???
+
+
+---
+```{r evpi, fig.width = 6, fig.height = 4, dev = "svg", echo = FALSE, out.width = "1200px", dev.args = list(family = "Droid Serif")}
+u = function(x) 3.5 + 2 * log(x)
+
+evpi = function (p) {
+  b  = matrix(c(8, 5, 8, 15), 2)
+  leave   = b[1, 1] * p +  b[1, 2] * (1 - p)
+  restore = b[2, 1] * p +  b[2, 2] * (1 - p)
+  evwoi   = pmax(leave, restore)
+
+  evwpi   = b[1, 1] * p + b[2, 2] * (1 - p)
+  evwpi - evwoi
+}
+
+eupi = function(p) {
+ sapply(p,
+   function(p) {
+     if (p <= (u(8) - u(15)) / (u(5) - u(15))) {
+       f = function(x) {
+           (p * u(8 - x) + (1 - p) * u(15 - x)) -
+           (p * u(5) + (1 - p) * u(15))
+       }
+     } else {
+       f = function(x) {
+           (p * u(8 - x) + (1 - p) * u(15 - x)) -
+           u(8)
+       }
+     }
+     uniroot(f, c(0, 8))$root
+   }
+ )
+}
+
+par(mar = c(4, 4, 2, 2))
+curve(evpi, 0, 1, las = 1, yaxs = "i", xaxs = "i", bty = "n", ylim = c(0, 2.5),
+      xlab = expression(italic(p)), ylab = "EVPI", lwd = 3)
+title("EVPI vs. probability of failure")
+```
+???
+
+
+
+---
+count: false
+```{r evpi2, fig.width = 6, fig.height = 4, dev = "svg", echo = FALSE, out.width = "1200px", dev.args = list(family = "Droid Serif")}
+u = function(x) 3.5 + 2 * log(x)
+
+evpi = function (p) {
+  b  = matrix(c(8, 5, 8, 15), 2)
+  leave   = b[1, 1] * p +  b[1, 2] * (1 - p)
+  restore = b[2, 1] * p +  b[2, 2] * (1 - p)
+  evwoi   = pmax(leave, restore)
+
+  evwpi   = b[1, 1] * p + b[2, 2] * (1 - p)
+  evwpi - evwoi
+}
+
+eupi = function(p) {
+ sapply(p,
+   function(p) {
+     if (p <= (u(8) - u(15)) / (u(5) - u(15))) {
+       f = function(x) {
+           (p * u(8 - x) + (1 - p) * u(15 - x)) -
+           (p * u(5) + (1 - p) * u(15))
+       }
+     } else {
+       f = function(x) {
+           (p * u(8 - x) + (1 - p) * u(15 - x)) -
+           u(8)
+       }
+     }
+     uniroot(f, c(0, 8))$root
+   }
+ )
+}
+
+par(mar = c(4, 4, 2, 2))
+curve(evpi, 0, 1, las = 1, yaxs = "i", xaxs = "i", bty = "n", ylim = c(0, 2.5),
+      xlab = expression(italic(p)), ylab = "EVPI", lwd = 3)
+segments(c(0, .5), c(1.5, 1.5), c(.5, .5), c(1.5, 0), lty = 2, lwd = 3)
+title("EVPI = 1.5 when p = .5")
+```
+???
+
+
+
+---
+count: false
+```{r evpi3, fig.width = 6, fig.height = 4, dev = "svg", echo = FALSE, out.width = "1200px", dev.args = list(family = "Droid Serif")}
+u = function(x) 3.5 + 2 * log(x)
+
+evpi = function (p) {
+  b  = matrix(c(8, 5, 8, 15), 2)
+  leave   = b[1, 1] * p +  b[1, 2] * (1 - p)
+  restore = b[2, 1] * p +  b[2, 2] * (1 - p)
+  evwoi   = pmax(leave, restore)
+
+  evwpi   = b[1, 1] * p + b[2, 2] * (1 - p)
+  evwpi - evwoi
+}
+
+eupi = function(p) {
+ sapply(p,
+   function(p) {
+     if (p <= (u(8) - u(15)) / (u(5) - u(15))) {
+       f = function(x) {
+           (p * u(8 - x) + (1 - p) * u(15 - x)) -
+           (p * u(5) + (1 - p) * u(15))
+       }
+     } else {
+       f = function(x) {
+           (p * u(8 - x) + (1 - p) * u(15 - x)) -
+           u(8)
+       }
+     }
+     uniroot(f, c(0, 8))$root
+   }
+ )
+}
+
+par(mar = c(4, 4, 2, 2))
+curve(evpi, 0, 1, las = 1, yaxs = "i", xaxs = "i", bty = "n", ylim = c(0, 2.5),
+      xlab = expression(italic(p)), ylab = "EVPI", lwd = 3)
+segments(c(0, .7), c(2.1, 2.1), c(.7, .7), c(2.1, 0), lty = 2, lwd = c(1, 3))
+title("EVPI is maximal when p = .7")
+```
+???
+
+
+
+---
+count: false
+```{r evpi4, fig.width = 6, fig.height = 4, dev = "svg", echo = FALSE, out.width = "1200px", dev.args = list(family = "Droid Serif"), warning = FALSE}
+u = function(x) 3.5 + 2 * log(x)
+
+evpi = function (p) {
+  b  = matrix(c(8, 5, 8, 15), 2)
+  leave   = b[1, 1] * p +  b[1, 2] * (1 - p)
+  restore = b[2, 1] * p +  b[2, 2] * (1 - p)
+  evwoi   = pmax(leave, restore)
+
+  evwpi   = b[1, 1] * p + b[2, 2] * (1 - p)
+  evwpi - evwoi
+}
+
+eupi = function(p) {
+ sapply(p,
+   function(p) {
+     if (p <= (u(8) - u(15)) / (u(5) - u(15))) {
+       f = function(x) {
+           (p * u(8 - x) + (1 - p) * u(15 - x)) -
+           (p * u(5) + (1 - p) * u(15))
+       }
+     } else {
+       f = function(x) {
+           (p * u(8 - x) + (1 - p) * u(15 - x)) -
+           u(8)
+       }
+     }
+     uniroot(f, c(0, 8))$root
+   }
+ )
+}
+
+par(mar = c(4, 4, 2, 2))
+curve(evpi, 0, 1, las = 1, yaxs = "i", xaxs = "i", bty = "n", ylim = c(0, 2.5),
+      xlab = expression(italic(p)), ylab = "EVPI", lwd = 3)
+segments(c(.7), c(2.1), c(.7), c(0), lty = 2, lwd = c(3))
+text(.7, 2.2, "\u2190 Restore", pos = 2)
+text(.7, 2.2, "Do Nothing \u2192", pos = 4, xpd = NA)
+title("EVPI is maximal at point of indifference")
+```
+
+--
+$\Large{} 5p + 15(1 - p) = 8p + 8(1 - p)$
+
+EV(restore) = EV(do nothing)
+
+
+???
+
+
+
+---
+# Risk tolerance
+
+--
+- Risk-neutral indifferent to uncertainty in payoff; only care about expected value
+
+
+--
+- Risk-averse sensitive to uncertainty in payoff; prefer the guarantee of small reward (or loss) over potential for large reward if might endure large loss
+
+
+--
+- e.g., risk averse prefer to do nothing and ensure 8 rather than risk only having 5 even if the expected value is 10
+
+
+--
+- Usually conservation decision makers are assumed to be risk-neutral. Not realistic?
+
+
+--
+- So how does this effect value of information?
+
+
+--
+- Since risk averse don't like uncertain outcomes, can assume risk-averse will value information more than risk neutral?  
+
+
+???
+
+
+
+---
+```{r utility, fig.width = 6, fig.height = 4, dev = "svg", echo = FALSE, out.width = "1200px", dev.args = list(family = "Droid Serif")}
+par(mar = c(4, 4, 2, 2))
+u = function(x) 3.5 + 2 * log(x)
+curve(I, 0, 15, las = 1,  las = 1, bty = "l", xlab = "",
+      ylab = "", lwd = 3)
+curve(u, lty = 3, lwd = 3, add = TRUE)
+legend(0, 15, c("Risk neutral", "Risk averse"), lty = c(3, 1), bty = "n")
+mtext("Value", 1, 3)
+mtext("Utility", 2, 3)
+title("Utility vs. Value")
+```
+
+
+---
+```{r eupi, fig.width = 6, fig.height = 4, dev = "svg", echo = FALSE, out.width = "1200px", dev.args = list(family = "Droid Serif")}
+u = function(x) 3.5 + 2 * log(x)
+
+evpi = function (p) {
+  b  = matrix(c(8, 5, 8, 15), 2)
+  leave   = b[1, 1] * p +  b[1, 2] * (1 - p)
+  restore = b[2, 1] * p +  b[2, 2] * (1 - p)
+  evwoi   = pmax(leave, restore)
+
+  evwpi   = b[1, 1] * p + b[2, 2] * (1 - p)
+  evwpi - evwoi
+}
+
+eupi = function(p) {
+ sapply(p,
+   function(p) {
+     if (p <= (u(8) - u(15)) / (u(5) - u(15))) {
+       f = function(x) {
+           (p * u(8 - x) + (1 - p) * u(15 - x)) -
+           (p * u(5) + (1 - p) * u(15))
+       }
+     } else {
+       f = function(x) {
+           (p * u(8 - x) + (1 - p) * u(15 - x)) -
+           u(8)
+       }
+     }
+     uniroot(f, c(0, 8))$root
+   }
+ )
+}
+
+par(mar = c(4, 4, 2, 2))
+curve(evpi, 0, 1, las = 1, yaxs = "i", xaxs = "i", bty = "n", ylim = c(0, 2.5),
+      xlab = expression(italic(p)), ylab = "Expected utility of information", lwd = 3)
+curve(eupi, 0.001, 1, lty = 3, lwd = 3, add = TRUE)
+legend(0, 2.5, c("Risk neutral", "Risk averse"), lty = c(3, 1), bty = "n")
+title("EUPI vs. probability of failure")
+```
+???
+
+
+
+---
+</br>
+- .font130[Value of information greatest when we have no idea what to do (expected utility of options is equal)]
+
+
+--
+- .font130[Risk tolerance affects what the maximal value of information is]
+
+
+--
+- .font130[Risk aversity can make information more valuable]
+
+
+--
+- .font130[But in certain circumstances it can mean it is relatively less valuable]
+
+???
+
+
+
+---
+# Thank you
+
+.font130[Peter Vesk, Michael Runge and Hugh Possingham]
+
+
+.font120[Heini Kujala, Paul Armsworth, Michael McCarthy, Alana Moore, José Lahoz-Monfort]
+
+</br>
+.center[![thank_you](https://m.popkey.co/eae3e9/L9KlL.gif)]
 

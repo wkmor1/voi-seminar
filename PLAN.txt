@@ -38,10 +38,10 @@
 *- Take home messages
 
 *-Part 4
-- revisit first example (now let probability of success vary)
-- expected value vs. p 
+*- revisit first example (now let probability of success vary)
+*- expected value vs. p 
 - intro risk, utility and expected utility
-- EUPI for risk-neutral vs. risk averse
+*- EUPI for risk-neutral vs. risk averse
 - Take home messages
 
 - Thank you
