@@ -1,6 +1,6 @@
 .title-slide {
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(http://previously.tv/m/kotm-par-sebastian-full.jpg);
-  background-size: cover;
+  background-size: contain;
 }
 
 .red {
