@@ -18,24 +18,70 @@ library(dplyr)
 ```
 # Value of information (VOI)
 
+???
+
+Thanks for coming.
+
+If I talk too quietly let me know.
+
+Feel free to ask questions during talk if anything doesnt make sense.
+
 --
 - .font120[Both a concept and a formal decision theoretic toolset]
 
+
+???
+
+So today I'm going to talk about a narrow but important part of decision science. The value of information, or VOI. 
+
+Can be thought of as both a rigidly defined set of formal tools used in decision analysis, but also as a more broad philosophy about how to think about information and learning in the context of decision making.
 
 --
 - .font120[In context of decision making, information has some finite value]
 
 
+???
+
+Either way, Value of Information presupposes that information has some finite value that can be compared and contrasted with the cost of information, and also the payoffs and losses resulting from the ultimate decision itself. Really all 
+'value of information' is, in a way, is an implicit acknowledgement of the decisioness of investing in learning and all the tools we have to assess ahead of time how to make a good decision can be applied to learning.
+
 --
 - .font120[Can tell you whether to seek new information, how much, and what kind]
 
 
+???
+
+So with this in mind VOI can be used to tell the decision maker whether it is worth seeking new information how much new information is needed and what form that new information should take.
+
 --
 - .font120[Implies some uncertainty is critical to decision making and some is not]
 
+.center[
+![suckers](https://cdn-images-1.medium.com/max/800/1*X_lOJvDQvzKtq_O70rMFRg.gif)
+]
+???
+
+This in implies that there two types of information in the context of decision making critical information and non-critical. Where critical information has the ability to change the decision made and the value of its outcome. non-critical information does not change the decision made regardless of its content and by definition has no value.
+
+
+
+---
+# My VOI work
 
 --
-- .font120[Most useful if can compare the cost of new information to the value in same currency]
+- .font120[Value of information for mangement of box-ironbark woodlands]
+
+
+--
+- .font120[Value of information for spatial conservation planning]
+
+
+--
+- .font120[Value of information for conservation auctions]
+
+
+--
+- .font120[Value of information and risk tolerance]
 
 ???
 
@@ -44,38 +90,23 @@ library(dplyr)
 ---
 # My VOI work
 
---
-- .font130[Value of information for mangement of box-ironbark woodlands]
+- .grey[.font120[Value of information for mangement of box-ironbark woodlands]]
 
 
---
-- .font130[Value of information for spatial conservation planning]
+- .red[.font120[Value of information for spatial conservation planning]]
 
 
---
-- .font130[Value of information for conservation auctions]
+- .grey[.font120[Value of information for conservation auctions]]
 
 
---
-- .font130[Value of information and risk tolerance]
-
-???
+- .red[.font120[Value of information and risk tolerance]]
 
 
+.center[
 
----
-# My VOI work
+![baller](https://68.media.tumblr.com/f834b08e7a1034bd3323b37840b1bb07/tumblr_inline_ned5q7I5Zc1rrje9w.gif)
 
-- .grey[.font130[Value of information for mangement of box-ironbark woodlands]]
-
-
-- .red[.font130[Value of information for spatial conservation planning]]
-
-
-- .grey[.font130[Value of information for conservation auctions]]
-
-
-- .red[.font130[Value of information and risk tolerance]]
+]
 
 ???
 
@@ -163,10 +194,15 @@ $\Large\mathrm{EVPI} = \mathrm{E}_\theta\max_a[v(a,\theta)] - \max_a\mathrm{E}_\
 
 
 ---
+background-image: url(https://i.imgur.com/9SBK2d2.jpg)
+background-size: 200px 200px
+background-repeat: no-repeat
+background-position: top right
+
 # An example 
 
 --
-- .font130[Manager responsible for endangered species]
+- .font130.width90[Manager responsible for endangered species]
 
 --
 - .font130[Currently 10 breeding pairs, but declining]
@@ -200,6 +236,11 @@ $\Large\mathrm{EVWOI} = \max_a\mathrm{E}_\theta[v(a,\theta)]$
 
 ---
 count: false
+background-image: url(https://i.imgur.com/9SBK2d2.jpg)
+background-size: 200px 200px
+background-repeat: no-repeat
+background-position: top right
+
 # An example
 
 .font130[
@@ -228,6 +269,11 @@ $\Large\mathrm{EVWOI} =\max_a$ .font150[(.red[8], .red[10])]
 
 ---
 count: false
+background-image: url(https://i.imgur.com/9SBK2d2.jpg)
+background-size: 200px 200px
+background-repeat: no-repeat
+background-position: top right
+
 # An example
 
 .font130[
@@ -256,6 +302,11 @@ $\Large\mathrm{EVWOI} =$ .font150.red[10]
 
 ---
 count: false
+background-image: url(https://i.imgur.com/9SBK2d2.jpg)
+background-size: 200px 200px
+background-repeat: no-repeat
+background-position: top right
+
 # An example
 
 .font130[
@@ -284,6 +335,11 @@ $\Large\mathrm{EVPI} = \mathrm{EVWPI} -$ .font150.red[10]
 
 ---
 count: false
+background-image: url(https://i.imgur.com/9SBK2d2.jpg)
+background-size: 200px 200px
+background-repeat: no-repeat
+background-position: top right
+
 # An example
 
 .font130[
@@ -312,6 +368,11 @@ $\Large\mathrm{EVPI} = \mathrm{E}_\theta\max_a[v(a,\theta)] -$ .font150.red[10]
 
 ---
 count: false
+background-image: url(https://i.imgur.com/9SBK2d2.jpg)
+background-size: 200px 200px
+background-repeat: no-repeat
+background-position: top right
+
 # An example
 
 .font130[
@@ -340,6 +401,11 @@ $\Large\mathrm{EVPI} = \mathrm{E}_\theta$.font150[(.blue[8], .blue[15]) - .red[1
 
 ---
 count: false
+background-image: url(https://i.imgur.com/9SBK2d2.jpg)
+background-size: 200px 200px
+background-repeat: no-repeat
+background-position: top right
+
 # An example
 
 .font130[
@@ -368,6 +434,11 @@ $\Large\mathrm{EVPI} =$ .font150[.blue[11.5] - .red[10]]
 
 ---
 count: false
+background-image: url(https://i.imgur.com/9SBK2d2.jpg)
+background-size: 200px 200px
+background-repeat: no-repeat
+background-position: top right
+
 # An example
 
 .font130[
@@ -412,6 +483,9 @@ $\Large\mathrm{EVPI} =$ .font150.purple[1.5]
 
 --
 - Is therefore optimal to spend up to value of 1.5 breeding pairs worth of resources to find out! 
+
+
+.center[![money](https://m.popkey.co/98e529/dZoqj.gif)]
 
 ???
 
@@ -470,6 +544,11 @@ mtext("EVSI", 2, 1)
 
 --
 - .font130[The value of information gives diminishing returns]
+
+
+.center[
+![ends](http://fingersonblast.com/storage/facts1tumblr_inline_okdlgsd3by1qfpw5e_500.gif?__SQUARESPACE_CACHEVERSION=1490790642158)
+]
 
 ???
 
@@ -777,6 +856,12 @@ mtext("EVSI", 2, 1)
 
 --
 - .font120[Doesn't tell us what we should do now]
+
+
+.center[
+![noidea](https://i.imgur.com/UqqxS3n.gif)
+]
+
 
 ???
 
@@ -1544,6 +1629,10 @@ title("EUPI vs. probability of failure")
 
 --
 - .font130[But in certain circumstances it can mean it is relatively less valuable]
+
+
+--
+.center[![end](https://media.giphy.com/media/z7inE8DVgUkwg/giphy.gif)]
 
 ???
 
