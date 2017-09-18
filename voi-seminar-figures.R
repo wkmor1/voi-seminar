@@ -76,7 +76,7 @@ plans_boot_df2 =
   mutate(hl = case_when(max < prop_loss ~ 0, min > prop_loss ~ 2, TRUE ~ 1))
 
 ggsave(
-  "HunterPlanBoot.svg",
+  "HunterPlanBoot.png",
   na.omit(plans_boot_df2) %>%
   arrange(mean) %>%
   mutate(x = seq(0, 1, length.out = n())) %>%
@@ -93,16 +93,16 @@ ggsave(
     axis.text.x = element_blank(),
     axis.text.y = element_blank()
   ),
-  "svg",
+  "png",
   "voi-seminar_files/figure-html", 
   width = 7, 
   height = 5,
   units = "in",
-  system_fonts = list(serif = "Droid Serif")
+  family = "Droid Serif"
 )
 
 ggsave(
-  "HunterPlanBootIC.svg",
+  "HunterPlanBootIC.png",
   na.omit(plans_boot_df2) %>%
   arrange(mean) %>%
   mutate(x = seq(0, 1, length.out = n())) %>%
@@ -119,12 +119,12 @@ ggsave(
     axis.text.x = element_blank(),
     axis.text.y = element_blank()
   ),
-  "svg",
+  "png",
   "voi-seminar_files/figure-html", 
   width = 7, 
   height = 5,
   units = "in",
-  system_fonts = list(serif = "Droid Serif")
+  family = "Droid Serif"
 )
 
 lapply(
