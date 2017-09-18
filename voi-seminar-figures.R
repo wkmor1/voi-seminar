@@ -34,8 +34,8 @@ ggsave(
   gg_raster(plans_boot_max, highlight = c(0, 1)) +
   scale_fill_viridis(na.value = NA, name = "Rank") +
   guides(fill = guide_colourbar(barheight = 10, label = FALSE)) +
-  ggtitle("Hunter Valley Priority Map", subtitle = "") +
-  theme_bw(base_size = 14) +
+  ggtitle("Hunter Valley Priority Map", subtitle = "All grid cells") +
+  theme_dark(base_size = 14) +
   theme(
     text = element_text(family = "serif"),
     axis.text = element_blank(),
@@ -55,7 +55,7 @@ ggsave(
   scale_fill_viridis(na.value = NA, name = "Rank") +
   guides(fill = guide_colourbar(barheight = 10, label = FALSE)) +
   ggtitle("Hunter Valley Priority Map", subtitle = "Top 20%") +
-  theme_bw(base_size = 14) +
+  theme_dark(base_size = 14) +
   theme(
     text = element_text(family = "serif"),
     axis.text = element_blank(),
@@ -101,6 +101,32 @@ ggsave(
   system_fonts = list(serif = "Droid Serif")
 )
 
+ggsave(
+  "HunterPlanBootIC.svg",
+  na.omit(plans_boot_df2) %>%
+  arrange(mean) %>%
+  mutate(x = seq(0, 1, length.out = n())) %>%
+  slice(floor(seq.int(1, n(), length.out = 10000))) %>%
+  ggplot +
+  geom_hline(aes(yintercept = prop_loss)) +
+  geom_linerange(aes(x = x, ymin = min, ymax = max, col = factor(hl))) +
+  scale_colour_manual(values = c("#DEB88766", "#F8F8FF66", "#FF000066"), guide = "none") +
+  xlab("Grid Cells") +
+  ylab("Ranking") +
+  theme_dark(base_size = 14) +
+  theme(
+    text = element_text(family = "serif"),
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank()
+  ),
+  "svg",
+  "voi-seminar_files/figure-html", 
+  width = 7, 
+  height = 5,
+  units = "in",
+  system_fonts = list(serif = "Droid Serif")
+)
+
 lapply(
   1:3,
   function(x) {
@@ -109,7 +135,7 @@ lapply(
       gg_raster(plans_boot_max, highlight = plans_boot_df2$hl == x - 1) +
       scale_fill_viridis(na.value = NA, name = "Rank") +
       guides(fill = guide_colourbar(barheight = 10, label = FALSE)) +
-      theme_bw(base_size = 14) +
+      theme_dark(base_size = 14) +
       theme(
         text = element_text(family = "serif"),
         axis.text = element_blank(), 

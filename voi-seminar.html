@@ -20,15 +20,19 @@ class: center, middle, inverse, title-slide
 ---
 
 
+
 # Value of information (VOI)
 
 ???
 
 Thanks for coming.
 
-If I talk too quietly let me know.
+Talk too quietly let me know
 
-Feel free to ask questions during talk if anything doesnt make sense.
+Ask questions during talk if don't make sense
+
+Today will talk about narrow but important part of decision science.
+
 
 --
 - .font120[Both a concept and a formal decision theoretic toolset]
@@ -36,9 +40,7 @@ Feel free to ask questions during talk if anything doesnt make sense.
 
 ???
 
-So today I'm going to talk about a narrow but important part of decision science. The value of information, or VOI. 
-
-Can be thought of as both a rigidly defined set of formal tools used in decision analysis, but also as a more broad philosophy about how to think about information and learning in the context of decision making.
+Both a rigidly defined set of formal tools used in decision analysis also a more broad philosophy, can use to think about information and learning in context of decision making
 
 --
 - .font120[In context of decision making, information has some finite value]
@@ -46,8 +48,8 @@ Can be thought of as both a rigidly defined set of formal tools used in decision
 
 ???
 
-Either way, Value of Information presupposes that information has some finite value that can be compared and contrasted with the cost of information, and also the payoffs and losses resulting from the ultimate decision itself. Really all 
-'value of information' is, in a way, is an implicit acknowledgement of the decisioness of investing in learning and all the tools we have to assess ahead of time how to make a good decision can be applied to learning.
+VOI presupposes information has finite value can be compared and contrasted with the cost of information, and payoffs and losses of ultimate decision
+
 
 --
 - .font120[Can tell you whether to seek new information, how much, and what kind]
@@ -55,7 +57,9 @@ Either way, Value of Information presupposes that information has some finite va
 
 ???
 
-So with this in mind VOI can be used to tell the decision maker whether it is worth seeking new information how much new information is needed and what form that new information should take.
+VOI is implicit acknowledgement of the decisioness of investing in learning 
+
+Tools we have to assess how to make good decision can be applied to learning ahead of time
 
 --
 - .font120[Implies some uncertainty is critical to decision making and some is not]
@@ -65,31 +69,50 @@ So with this in mind VOI can be used to tell the decision maker whether it is wo
 ]
 ???
 
-This in implies that there two types of information in the context of decision making critical information and non-critical. Where critical information has the ability to change the decision made and the value of its outcome. non-critical information does not change the decision made regardless of its content and by definition has no value.
+Critical information can change the decision made and the value of its outcome
+
+Non-critical information does not change the decision made regardless of its content,c by definition has no value.
 
 
 
 ---
 # My VOI work
 
+???
+
+The work I have been doing on VOI is to examine and extend it's use in the conservation sciences 
+
 --
 - .font120[Value of information for mangement of box-ironbark woodlands]
 
+
+???
+
+Calculated VOI in the context of managing box-ironbark forests in Victoria
 
 --
 - .font120[Value of information for spatial conservation planning]
 
 
+???
+
+Demonstrated how you can calculate the VOI for reserve design
+
 --
 - .font120[Value of information for conservation auctions]
 
 
+???
+
+Explored ways of valuing information to optimise conservation auctions
+
 --
 - .font120[Value of information and risk tolerance]
 
+
 ???
 
-
+Addressed the issue risk tolerance and it's effect on the value of information
 
 ---
 # My VOI work
@@ -114,7 +137,7 @@ This in implies that there two types of information in the context of decision m
 
 ???
 
-
+Today just want to focus on these two pieces of work
 
 ---
 class: inverse, center, middle
@@ -124,14 +147,21 @@ class: inverse, center, middle
 
 ???
 
-
+Before I do. I'll just briefly touch on the theory of value of information for the benefit of those who may not be familiar
 
 ---
 # Formal VOI
 
---
+???
 
+VOI is not new, it has been around since at least the 40s or 50s
+
+--
 ## Expected Value of Information (EVI)
+
+???
+
+VOI almost always an expected value. Value from decision expected. sum of the outcomes weighted by their probility of happening
 
 --
 Difference between:
@@ -140,54 +170,72 @@ Difference between:
 and the
 
 - Expected value of making decision with __new__ information (EVWNI)
-
-
---
+p
 &lt;/br&gt;
 &lt;/br&gt;
 `\(\Large\mathrm{EVI} = \mathrm{EVWNI} - \mathrm{EVWOI}\)`
 
 ???
 
-
+VOI is the magnitude of the difference between these two expected values
 
 ---
 # Formal VOI
 
 ## Expected Value With Original Information (EVWOI)
 
+???
+
+start with 2nd component
+
+expected value of making the decision with resolving any uncertainty
+
 --
-
-
 `\(\Large\mathrm{EVWOI} = \max_a\mathrm{E}_\theta[v(a,\theta)]\)`
-
-
---
 
 `\(\Large a\)` = actions, alternatives etc
 
---
-
 `\(\Large\theta\)` = uncertainty, model, system state
+
 
 ???
 
+First calculate the expected values of taking each  action and choose (maximise) the one with greatest expected outcome
+
+(A) represents the actions you can take
+
+(Theta) represents the uncertainty you have in the outcomes of those actions
 
 ---
 # Formal VOI
 ## Many Forms of VOI
 
---
 
+???
+
+EVWOI is common to all of them
+--
 `\(\Large\mathrm{EV?I} = \mathrm{EVW?I} - \mathrm{EVWOI}\)`
 
---
 
+???
+
+What matters is the "new" information component
+
+--
 ## Expected Value of Perfect Information (EVPI)
 
---
 
+???
+
+For example we can calculate the value of perfect information
+
+--
 `\(\Large\mathrm{EVPI} = \mathrm{EVWPI} - \mathrm{EVWOI}\)`
+
+???
+
+Which is the difference between the expected value with no uncertainty and the expected value with the original level of uncertainty
 
 --
 
@@ -195,7 +243,13 @@ and the
 
 ???
 
+EVWPI is only slighly different to EVWOI
 
+just reverse the expectation and maximisation
+
+Across the uncertainty find the action that maximisises value each time assuming certainty and then take the expectation of those values 
+
+EVPI is the UPPER BOUND
 
 ---
 background-image: url(https://i.imgur.com/9SBK2d2.jpg)
@@ -493,26 +547,40 @@ background-position: top right
 
 ???
 
-
+Provided you can convert the value of 1.5 breeding pairs into the same currency as the cost of learning
 
 ---
 # Formal VOI
 
---
-
 ## Expected Value of Sample Information
+
+
+???
+
+Before continuing highlight one more form of EVI
 
 --
 &lt;/br&gt;
 &lt;/br&gt;
 `\(\Large\mathrm{EVSI} = \mathrm{EVWSI} - \mathrm{EVWOI}\)`
 
+
+???
+
+The most general form of EVI, sample of information. 
+
+That is unlike perfect information, it is not the EVI of resolving all uncertaity it is the value of only resolve a bit
+
 --
 
-`\(\Large\mathrm{EVSI} = \mathrm{E}_s[\max_a\mathrm{E}_{\theta|s}[v(a,s)]] - \max_a\mathrm{E}_\theta[v(a,\theta)]\)`
+`\(\Large\mathrm{EVSI} = \mathrm{E}_s[\max_a\mathrm{E}_{\theta|s}[v(a,\theta)]] - \max_a\mathrm{E}_\theta[v(a,\theta)]\)`
 
 
 ???
+
+Without detail. in the same notation, can see there is an extra step of expectation and I introduced a term, s, to represent the sample of information. In reality this could the results of experiments or monitoring or even just a single observation
+
+If we let the sample-size of, s, got to infinity you should be able to see that this term cancels out and this just becomes the value of perfect information
 
 ---
 class: centre, middle
@@ -520,12 +588,18 @@ class: centre, middle
 &lt;img src="voi-seminar_files/figure-html/dimretplot-1.svg" width="1200px" /&gt;
 ???
 
+Graphically that idea looks this. this graph also higlights a point will come back to later.
 
+VOI in general, at least theoretically, has diminising returns.
 
 ---
 &lt;/br&gt;
 - .font130[VOI both concept and formal toolset]
 
+
+???
+
+Take home messages from part 1 
 
 --
 - .font130[Difference between value with original and new information]
@@ -536,11 +610,7 @@ class: centre, middle
 
 
 --
-- .font130[EVPI is the upper bound]
-
-
---
-- .font130[The value of information gives diminishing returns]
+- .font130[EVPI is the upper bound, EVSI is the genral form and has diminishing returns]
 
 
 .center[
@@ -625,7 +695,7 @@ class: inverse, center, middle
 
 
 --
-- .font120[Actions are choose among a set of candidate areas for protection or other conservation action]
+- .font120[Actions are: choose among a set of candidate areas for protection or other conservation action]
 
 
 ???
@@ -723,7 +793,7 @@ Different hypotheses have different associated partial expected value of perfect
 .pull-right[
 ## 2. Formal VOI Analyses 
 
-- Authors of these studies tend use more qualifiers to describe information value like, 
+- Authors of these studies tend to use more qualifiers to describe information value like, 
  "_modest_" (e.g., Moore 2011) or "_low_" (e.g, Johnson 2014) 
 
 ]
@@ -756,8 +826,7 @@ class: centre, middle
 &lt;img src="voi-seminar_files/figure-html/dimretplotB1-1.svg" width="1200px" /&gt;
 ???
 
-
-
+Returning to this graph showing that VOI has diminishing returns
 
 ---
 count: false
@@ -766,7 +835,7 @@ class: centre, middle
 &lt;img src="voi-seminar_files/figure-html/dimretplotB2-1.svg" width="1200px" /&gt;
 ???
 
-
+For the sake of argument lets replace sample-size with time, assuming over time we accumulate information and the cummulative value of information is increasing towards perfect knowledge
 
 ---
 count: false
@@ -775,7 +844,7 @@ class: centre, middle
 &lt;img src="voi-seminar_files/figure-html/dimretplotB3-1.svg" width="1200px" /&gt;
 ???
 
-
+Lets assume that anyone of these studies occurs at some point in the middle
 
 ---
 count: false
@@ -784,7 +853,9 @@ class: centre, middle
 &lt;img src="voi-seminar_files/figure-html/dimretplotB4-1.svg" width="1200px" /&gt;
 ???
 
+Now from the perspective of the informal information valuers: they look back in time
 
+Whereas formal information valuers are looking at what can be learned in the future
 
 ---
 count: false
@@ -793,11 +864,24 @@ class: centre, middle
 &lt;img src="voi-seminar_files/figure-html/dimretplotB5-1.svg" width="1200px" /&gt;
 ???
 
+Purple lines show that looking in either direction you will see quite a different VOI
 
+I have no proof but I think in general people doing both tend to be up this end (the right).
+
+For much the same reason.
+
+Informal: pick a subject with lots of data so they can subset and demonstrate it's worth
+
+Formal: picking case-studies that are on well known studies were original information is rich
 
 ---
 # Problems with informal VOI
 
+
+
+???
+
+I think there a three problems with the informal approach. and all addressed by doing formal VOI
 
 --
 - .font120[Straw man]
@@ -810,7 +894,7 @@ class: centre, middle
 --
 - .font120[Doesn't tell us what we should do now]
 
-
+&lt;/br&gt;
 .center[
 ![noidea](https://i.imgur.com/UqqxS3n.gif)
 ]
@@ -824,6 +908,10 @@ class: centre, middle
 &lt;/br&gt;
 - .font130[Two flavors of VOI: Informal and formal]
 
+
+???
+
+Take home messages from part 2
 
 --
 - .font130[Informal used in conservation planning]
@@ -893,7 +981,7 @@ background-image: url(voi-seminar_files/figure-html/simpleZon1.svg)
 
 ???
 
-
+Imagine the numbers of represent carrying capacity or habitat suitability scores, etc.
 
 ---
 count: false
@@ -905,6 +993,7 @@ background-image: url(voi-seminar_files/figure-html/simpleZon2.svg)
 
 ???
 
+Care about these two species equally 
 
 ---
 count: false
@@ -915,7 +1004,11 @@ background-image: url(voi-seminar_files/figure-html/simpleZon3.svg)
 
 ???
 
+Here we can use an conservation planning algorithm like Zonation or Marxan
 
+In this case I have used zonations with the additive benefit function.
+
+It tries to maxmise the average proportion of value remaining when removing a grid cell in reverse order
 
 ---
 count: false
@@ -926,7 +1019,9 @@ background-image: url(voi-seminar_files/figure-html/simpleZon4.svg)
 
 ???
 
+When we can only afford to save one cell, just pick top rank. 
 
+in this case we would save on average about 7 percent of each species distribution
 
 ---
 count: false
@@ -937,7 +1032,11 @@ background-image: url(voi-seminar_files/figure-html/simpleZon5.svg)
 
 ???
 
+In reality we can't know precisely the distribution of species
 
+we can represent the uncertainty as alternate scenarios, or map sets, which could even be weighted differently,
+
+for now weighted equally
 
 ---
 count: false
@@ -986,7 +1085,7 @@ background-image: url(voi-seminar_files/figure-html/simpleZon7.svg)
 
 ???
 
-
+Haven't calculated the second EV yet
 
 ---
 count: false
@@ -998,7 +1097,7 @@ background-image: url(voi-seminar_files/figure-html/simpleZon8.svg)
 
 ???
 
-
+ranking the according to the second scenario this time average of 5%
 
 ---
 count: false
@@ -1010,7 +1109,9 @@ background-image: url(voi-seminar_files/figure-html/simpleZon7.svg)
 
 ???
 
+Choose the action that maxmise. Means we can discard the 5% result.
 
+imporantly though we still had to calculate it to work out it wasn't the max
 
 ---
 count: false
@@ -1022,7 +1123,9 @@ background-image: url(voi-seminar_files/figure-html/simpleZon9.svg)
 
 ???
 
+EVWPI is actually simpler as we can just work out what we would do under each scenario and average the results 
 
+because we have equal weighting
 
 ---
 count: false
@@ -1066,6 +1169,9 @@ background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url
 
 # Case study: A spatial conservation plan for the Hunter Valley, NSW
 
+???
+
+So I have done this for a less trivial example
 
 --
 .white.font140[
@@ -1086,37 +1192,57 @@ background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url
 
 ???
 
-
+Heini, Brendan, Amy Whitehead and others have worked extensively on this problem, and I using a stripped back version here to demonstrate how to do VOI for conservation planning.
 
 ---
-count: false
 class: inverse
 background-size: cover
 background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://c2.staticflickr.com/6/5547/14623801992_9fac537b25_b.jpg)
 # Case study: A spatial conservation plan for the Hunter Valley, NSW
 
 
---
-.white.font140[
-- __Chose 6 species: 2 plants; 2 mammals; 2 birds__
+- .white.font140[__Chose 6 species: 2 plants; 2 mammals; 2 birds__]
 
-
-- __Built SDMs with publically available occurrence data and covariates for the Hunter Region (~40,000 1km grid cells)__
-
-
-- __Bootstrapped the SDMs to characterised the uncertainty (resampling with replacement)__
-
-
-- __Build conservation plans protecting top 20% of landscape using uncertain SDMs__
-
-
-- __Calculate EVWOI, EVWPI and EVPI__
-
-]
 
 ???
 
+Threatend species, all of real concern, but by no means the only species that decision makers care about 
 
+--
+- .white.font140[__Built SDMs (MaxEnt) with publically available occurrence data (30 records per species) and covariates for the Hunter Region (~40,000 1km grid cells)__]
+
+
+???
+
+Not neccessarly the best way of modelling species distributions but certainly a very common method used in conservation planning
+
+--
+- .white.font140[__Bootstrapped the SDMs to characterised the uncertainty (resampling with replacement)__]
+
+
+???
+
+Equivalent to the alternative equally weighted scenarios I introduced in the example
+
+Did 1000 per species
+
+--
+- .white.font140[__Build conservation plans protecting top 20% of landscape using uncertain SDMs__]
+
+
+???
+
+Again the same as in my toy example, ranked using additive benefit, instead assessing performance on the single top ranked grid cell performance is the value of top 20% of grid cells. Also assuming that all grid cells are available in reality the are not, houses mines, etc.
+
+1000 bs equals 1000 plans
+
+--
+- .white.font140[__Calculate EVWOI, EVWPI and EVPI__]
+
+
+???
+
+EVWOI computationally hard cos you need to cross assess each 1000 plans againts each 1000 bs species mapset = 1 million performance assessments.
 
 ---
 background-image: url(http://2.bp.blogspot.com/-5OojQkKBsJs/TfIKkBNVnVI/AAAAAAAABQQ/4YC8Fj2TCPU/s1600/Regent%2Bhoneyeater%2BXanthomyza%2Bphrygia.jpg), url(https://www.uq.edu.au/news/filething/get/125532/Hidden%20Vale%20-%20spotted%20tail%20quoll.jpg), url(http://media.bowerbird.org.au/181/181183-Full800.jpg), url(https://c1.staticflickr.com/1/727/22443858838_21efba93cf_b.jpg), url(http://www.environment.nsw.gov.au/images/animals/sugarGliderLg.jpg), url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Melaleuca_groveana_leaves%2C_flowers_and_fruit.jpg/1200px-Melaleuca_groveana_leaves%2C_flowers_and_fruit.jpg)
@@ -1127,21 +1253,36 @@ background-position: 0px 0px, 305px 0px, 610px 0px, 0px 350px, 305px 350px, 610p
 
 ???
 
+Regent honeyeater: Critical endangered, on IUCN red list.
 
+Powerful Owl: Vulnerable in NSW
+
+Spotted-tailed Quoll: Federally Endangered and near threatened on IUCN
+
+Squirrel Glider: Vulnerable in NSW
+
+Bynoe's Wattle: Endangered in NSW
+
+Grove's Paperbark: Vulnerable in NSW
 
 ---
 background-image: url(voi-seminar_files/figure-html/HunterSpeciesModels.svg)
 
 ???
 
+Here are the distribution maps based on the public occurrence data on the Atlas of Living australia (random 30 records).
 
+I've artifically reduced the available points so to ensure there is a measureable level of uncertainty.  
 
+Covariates used: mean solar radiation, annual mean temperature, annual preciptation, COV of precipitation, soil fertility and topographic wetness.
+
+Not an exercise in trying to build the best model by anymeans
 ---
 background-image: url(voi-seminar_files/figure-html/HunterPlan1.svg)
 
 ???
 
-
+With those inputs the planning algorithm ranks sites in the west low and sites in the east high. with some low ranking cells around new castle and also along the coast. havent checked but this probably a pretty good map of existing and proposed coal mines :(
 
 ---
 count: false
@@ -1149,10 +1290,19 @@ background-image: url(voi-seminar_files/figure-html/HunterPlan2.svg)
 
 ???
 
+And the top 20% of those sites are these ones.
 
+So if you ignore uncertainty and you could put reserves whereever you want over 20% of the region you'd put them here.
+
+Ignoring a whole bunch of caveats like connnectivity and the appropriateness of the objective function and missing species and other considerations.
 
 ---
 # Results
+
+???
+
+So for this example what happens when you go through the steps of taking account of uncertainty by bootstrapping, planning based on the different map sets, cross assessing the plans and calculating the EVWOI and EVWPI
+
 
 --
 ### EVWOI
@@ -1200,14 +1350,29 @@ Expected performance of plan given complete certainty about species distribution
 
 ???
 
+Individual species will be expected to do better or worse on average, how worse?
 
+With extra information we expect to be better able to trade some loss in a well protected species for greater gains in less well protected species.
+
+Note this table still assumes we are learning everything there is to know about all species. Not one species at a time. That is called the expected value of partial perfect information. You'll have to read my thesis to see how that is done.
 
 ---
 background-image: url(voi-seminar_files/figure-html/HunterPlanBoot.svg)
 
 ???
 
+Again this is not a partial-perfect EVI analysis but is does hint at what the results of one be
 
+This is a graph of every grid cell and the range of rankings it achieves across the bootstrap samples
+
+I have ordered them by their average ranking and divided them into three groups based on whether they ever cross the 20% threshold.
+
+---
+background-image: url(voi-seminar_files/figure-html/HunterPlanBootIC.svg)
+
+???
+
+With a better color scheme and can use an awkward metaphor!! Ice cream!
 
 ---
 background-image: url(voi-seminar_files/figure-html/HunterPlanZones1.svg)
@@ -1230,12 +1395,16 @@ background-image: url(voi-seminar_files/figure-html/HunterPlanZones3.svg)
 
 ???
 
-
+Haven't tested it but could be a usefull heuristic and has come up in some of my other VOI work
 
 ---
 &lt;/br&gt;
 - .font130[Possible to do a formal VOI for a conservation plan]
 
+
+???
+
+Take home messages from part 3
 
 --
 - .font130[In Hunter region there is value of information at least for this example]
