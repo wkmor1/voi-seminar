@@ -1756,7 +1756,7 @@ u = function(x) 3.5 + 2 * log(x)
 curve(I, 0, 15, las = 1,  las = 1, bty = "l", xlab = "",
       ylab = "", lwd = 3)
 curve(u, lty = 3, lwd = 3, add = TRUE)
-legend(0, 15, c("Risk neutral", "Risk averse"), lty = c(3, 1), bty = "n")
+legend(0, 15, c("Risk neutral", "Risk averse"), lty = c(1, 3), bty = "n")
 mtext("Value", 1, 3)
 mtext("Utility", 2, 3)
 title("Utility vs. Value")
@@ -1809,7 +1809,7 @@ par(mar = c(4, 4, 2, 2))
 curve(evpi, 0, 1, las = 1, yaxs = "i", xaxs = "i", bty = "n", ylim = c(0, 2.5),
       xlab = expression(italic(p)), ylab = "Expected utility of information", lwd = 3)
 curve(eupi, 0.001, 1, lty = 3, lwd = 3, add = TRUE)
-legend(0, 2.5, c("Risk neutral", "Risk averse"), lty = c(3, 1), bty = "n")
+legend(0, 2.5, c("Risk neutral", "Risk averse"), lty = c(1, 3), bty = "n")
 title("EUPI vs. probability of failure")
 ```
 ???
