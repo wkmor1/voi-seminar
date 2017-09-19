@@ -979,9 +979,6 @@ Take home messages from part 2
 --
 - .font130[There are problems with the informal approach and conservation planning may benefit from using formal VOI]
 
-.center[![problem](https://media.giphy.com/media/8wGbjEEGArmTK/giphy.gif)]
-
-
 
 ???
 
@@ -1057,7 +1054,7 @@ background-image: url(voi-seminar_files/figure-html/simpleZon3.svg)
 
 Here we can use an conservation planning algorithm like Zonation or Marxan
 
-In this case I have used zonations with the additive benefit function.
+In this case I have used Zonation with the additive benefit function.
 
 It tries to maxmise the average proportion of value remaining when removing a grid cell in reverse order
 
@@ -1381,7 +1378,7 @@ Expected performance of plan given complete certainty about species distribution
 
 
 --
-.font130[For species with orginal population of 10,000 expect to protect .purple[40] more with reserve network would otherwise]
+.font120[Species with orginal population of 10,000 expect to protect .purple[40] more with reserve network than would otherwise]
 
 
 --
@@ -1391,7 +1388,7 @@ Expected performance of plan given complete certainty about species distribution
 |                      | EVWOI | EVWPI | EVPI | 
 |:---------------------|:-----:|:-----:|:----:|
 | Bynoe's Wattle       | 72.9  | 72.1  | -0.9 |
-| _Melaleuca groveana_ | 27.8  | 28.1  | 0.2  |
+| Grove's Paperbark    | 27.8  | 28.1  | 0.2  |
 | Spotted-tailed Quoll | 20.6  | 21.0  | 0.4  |
 | Powerfull Owl        | 22.0  | 22.6  | 0.6  |
 | Squirrel Glider      | 29.6  | 30.2  | 0.6  |
