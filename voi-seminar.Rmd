@@ -21,13 +21,13 @@ library(dplyr)
 
 ???
 
-Thanks for coming.
+Thanks for coming
 
 Talk too quietly let me know
 
-Ask questions during talk if don't make sense
+Ask questions during talk if I don't make sense
 
-Today will talk about narrow but important part of decision science.
+Today will talk about narrow but important part of decision science
 
 
 --
@@ -113,7 +113,7 @@ Addressed the issue risk tolerance and it's effect on the value of information
 ---
 # My VOI work
 
-- .grey[.font120[Value of information for mangement of box-ironbark woodlands]]
+- .grey[.font120[Value of information for management of box-ironbark woodlands]]
 
 
 - .red[.font120[Value of information for spatial conservation planning]]
@@ -157,7 +157,7 @@ VOI is not new, it has been around since at least the 40s or 50s
 
 ???
 
-VOI almost always an expected value. Value from decision expected. sum of the outcomes weighted by their probility of happening
+VOI almost always an expected value. Value from decision expected. sum of the outcomes weighted by their probability of happening
 
 --
 Difference between:
@@ -239,7 +239,7 @@ $\Large\mathrm{EVPI} = \mathrm{E}_\theta\max_a[v(a,\theta)] - \max_a\mathrm{E}_\
 
 ???
 
-EVWPI is only slighly different to EVWOI
+EVWPI is only slightly different to EVWOI
 
 just reverse the expectation and maximisation
 
@@ -565,7 +565,7 @@ $\Large\mathrm{EVSI} = \mathrm{EVWSI} - \mathrm{EVWOI}$
 
 The most general form of EVI, sample of information. 
 
-That is unlike perfect information, it is not the EVI of resolving all uncertaity it is the value of only resolve a bit
+That is unlike perfect information, it is not the EVI of resolving all uncertainty it is the value of only resolve a bit
 
 --
 
@@ -579,7 +579,7 @@ Without detail. in the same notation, can see there is an extra step of expectat
 If we let the sample-size of, s, got to infinity you should be able to see that this term cancels out and this just becomes the value of perfect information
 
 ---
-class: centre, middle
+class: center, middle
 
 ```{r dimretplot, fig.width = 4, fig.height = 3, dev = "svg", echo = FALSE, out.width = "1200px", dev.args = list(family = "Droid Serif")}
 par(mar = c(3, 3, 1, 1))
@@ -591,9 +591,9 @@ mtext("EVSI", 2, 1)
 ```
 ???
 
-Graphically that idea looks this. this graph also higlights a point will come back to later.
+Graphically that idea looks this. this graph also highlights a point will come back to later.
 
-VOI in general, at least theoretically, has diminising returns.
+VOI in general, at least theoretically, has diminishing returns.
 
 ---
 </br>
@@ -613,7 +613,7 @@ Take home messages from part 1
 
 
 --
-- .font130[EVPI is the upper bound, EVSI is the genral form and has diminishing returns]
+- .font130[EVPI is the upper bound, EVSI is the general form and has diminishing returns]
 
 
 .center[
@@ -690,7 +690,7 @@ Don't claim this is a systematic review of the literature, this is somewhat of c
 
 
 --
-- .font120[Span a wide range systems (coutry-wide reserve networks, forest stocks, fisheries, etc.)]
+- .font120[Span a wide range systems (country-wide reserve networks, forest stocks, fisheries, etc.)]
 
 
 --
@@ -828,7 +828,7 @@ Different hypotheses have different associated partial expected value of perfect
 
 
 ---
-class: centre, middle
+class: center, middle
 
 ```{r dimretplotB1, fig.width = 4, fig.height = 3, dev = "svg", echo = FALSE, out.width = "1200px", dev.args = list(family = "Droid Serif")}
 par(mar = c(3, 3, 1, 1))
@@ -844,7 +844,7 @@ Returning to this graph showing that VOI has diminishing returns
 
 ---
 count: false
-class: centre, middle
+class: center, middle
 
 ```{r dimretplotB2, fig.width = 4, fig.height = 3, dev = "svg", echo = FALSE, out.width = "1200px", dev.args = list(family = "Droid Serif")}
 par(mar = c(3, 3, 1, 1))
@@ -856,11 +856,11 @@ mtext("EVSI", 2, 1)
 ```
 ???
 
-For the sake of argument lets replace sample-size with time, assuming over time we accumulate information and the cummulative value of information is increasing towards perfect knowledge
+For the sake of argument lets replace sample-size with time, assuming over time we accumulate information and the cumulative value of information is increasing towards perfect knowledge
 
 ---
 count: false
-class: centre, middle
+class: center, middle
 
 ```{r dimretplotB3, fig.width = 4, fig.height = 3, dev = "svg", echo = FALSE, out.width = "1200px", dev.args = list(family = "Droid Serif")}
 par(mar = c(3, 3, 1, 1))
@@ -877,7 +877,7 @@ Lets assume that anyone of these studies occurs at some point in the middle
 
 ---
 count: false
-class: centre, middle
+class: center, middle
 
 ```{r dimretplotB4, fig.width = 4, fig.height = 3, dev = "svg", echo = FALSE, out.width = "1200px", dev.args = list(family = "Droid Serif"), warning = FALSE}
 par(mar = c(3, 3, 1, 1))
@@ -898,7 +898,7 @@ Whereas formal information valuers are looking at what can be learned in the fut
 
 ---
 count: false
-class: centre, middle
+class: center, middle
 
 ```{r dimretplotB5, fig.width = 4, fig.height = 3, dev = "svg", echo = FALSE, out.width = "1200px", dev.args = list(family = "Droid Serif"), warning = FALSE}
 par(mar = c(3, 3, 1, 1))
@@ -1056,7 +1056,7 @@ Here we can use an conservation planning algorithm like Zonation or Marxan
 
 In this case I have used Zonation with the additive benefit function.
 
-It tries to maxmise the average proportion of value remaining when removing a grid cell in reverse order
+It tries to maximize the average proportion of value remaining when removing a grid cell in reverse order
 
 ---
 count: false
@@ -1159,7 +1159,7 @@ $\Large\mathrm{EVPI} = \mathrm{EVWPI} -$ .font130[.red[6%]]
 
 Choose the action that maxmise. Means we can discard the 5% result.
 
-imporantly though we still had to calculate it to work out it wasn't the max
+importantly though we still had to calculate it to work out it wasn't the max
 
 ---
 count: false
@@ -1262,7 +1262,7 @@ Threatend species, all of real concern, but by no means the only species that de
 
 ???
 
-Not neccessarly the best way of modelling species distributions but certainly a very common method used in conservation planning
+Not necessarily the best way of modelling species distributions but certainly a very common method used in conservation planning
 
 --
 - .white.font140[__Bootstrapped the SDMs to characterised the uncertainty (resampling with replacement)__]
@@ -1290,7 +1290,7 @@ Again the same as in my toy example, ranked using additive benefit, instead asse
 
 ???
 
-EVWOI computationally hard cos you need to cross assess each 1000 plans againts each 1000 bs species mapset = 1 million performance assessments.
+EVWOI computationally hard cos you need to cross assess each 1000 plans against each 1000 bs species mapset = 1 million performance assessments.
 
 ---
 background-image: url(http://2.bp.blogspot.com/-5OojQkKBsJs/TfIKkBNVnVI/AAAAAAAABQQ/4YC8Fj2TCPU/s1600/Regent%2Bhoneyeater%2BXanthomyza%2Bphrygia.jpg), url(https://www.uq.edu.au/news/filething/get/125532/Hidden%20Vale%20-%20spotted%20tail%20quoll.jpg), url(http://media.bowerbird.org.au/181/181183-Full800.jpg), url(https://c1.staticflickr.com/1/727/22443858838_21efba93cf_b.jpg), url(http://www.environment.nsw.gov.au/images/animals/sugarGliderLg.jpg), url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Melaleuca_groveana_leaves%2C_flowers_and_fruit.jpg/1200px-Melaleuca_groveana_leaves%2C_flowers_and_fruit.jpg)
@@ -1318,11 +1318,11 @@ background-image: url(voi-seminar_files/figure-html/HunterSpeciesModels.svg)
 
 ???
 
-Here are the distribution maps based on the public occurrence data on the Atlas of Living australia (random 30 records).
+Here are the distribution maps based on the public occurrence data on the Atlas of Living Australia (random 30 records).
 
-I've artifically reduced the available points so to ensure there is a measureable level of uncertainty.  
+I've artificially reduced the available points so to ensure there is a measurable level of uncertainty.  
 
-Covariates used: mean solar radiation, annual mean temperature, annual preciptation, COV of precipitation, soil fertility and topographic wetness.
+covariates used: mean solar radiation, annual mean temperature, annual precipitation, COV of precipitation, soil fertility and topographic wetness.
 
 Not an exercise in trying to build the best model by any means
 ---
@@ -1330,7 +1330,7 @@ background-image: url(voi-seminar_files/figure-html/HunterPlan1.svg)
 
 ???
 
-With those inputs the planning algorithm ranks sites in the west low and sites in the east high. with some low ranking cells around new castle and also along the coast. havent checked but this probably a pretty good map of existing and proposed coal mines :(
+With those inputs the planning algorithm ranks sites in the west low and sites in the east high. with some low ranking cells around new castle and also along the coast. haven checked but this probably a pretty good map of existing and proposed coal mines :(
 
 ---
 count: false
@@ -1340,9 +1340,9 @@ background-image: url(voi-seminar_files/figure-html/HunterPlan2.svg)
 
 And the top 20% of those sites are these ones.
 
-So if you ignore uncertainty and you could put reserves whereever you want over 20% of the region you'd put them here.
+So if you ignore uncertainty and you could put reserves wherever you want over 20% of the region you'd put them here.
 
-Ignoring a whole bunch of caveats like connnectivity and the appropriateness of the objective function and missing species and other considerations.
+Ignoring a whole bunch of caveats like connectivity and the appropriateness of the objective function and missing species and other considerations.
 
 ---
 # Results
@@ -1378,7 +1378,7 @@ Expected performance of plan given complete certainty about species distribution
 
 
 --
-.font120[Species with orginal population of 10,000 expect to protect .purple[40] more with reserve network than would otherwise]
+.font120[Species with original population of 10,000 expect to protect .purple[40] more with reserve network than would otherwise]
 
 
 --
@@ -1445,7 +1445,7 @@ background-image: url(voi-seminar_files/figure-html/HunterPlanZones3.svg)
 
 ???
 
-Haven't tested it but could be a usefull heuristic and has come up in some of my other VOI work
+Haven't tested it but could be a useful heuristic and has come up in some of my other VOI work
 
 ---
 </br>
@@ -1702,7 +1702,7 @@ What this point represents is the point of indifference
 
 decision maker is indifferent about which action they should take.
 
-When the probabilty of failure is below they would chose to restore
+When the probability of failure is below they would chose to restore
 
 Higher; and they would do nothing.
 
@@ -1768,9 +1768,9 @@ Before try to answer that question need to introduce the concept of utility
 
 Think of utility as the perception of value. 
 
-A risk neutral decision maker exibits 1 to 1 relationship they percieve value as value and only care about maxmising there expected value when making a decision
+A risk neutral decision maker exhibits 1 to 1 relationship they perceive value as value and only care about maximising there expected value when making a decision
 
-someone who is risk-averse, percieves diminishing returns with value and importatly the percieve high value has having comparably lower utility compared to a risk neutralists
+someone who is risk-averse, perceives diminishing returns with value and importantly the perceive high value has having comparably lower utility compared to a risk neutralists
 
 ---
 ```{r eupi, fig.width = 6, fig.height = 4, dev = "svg", echo = FALSE, out.width = "1200px", dev.args = list(family = "Droid Serif")}
