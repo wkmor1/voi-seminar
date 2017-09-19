@@ -1861,7 +1861,7 @@ When the risk-averse decision maker is a position of staying with the safe bet o
 .font130[Peter Vesk, Michael Runge and Hugh Possingham]
 
 
-.font120[Heini Kujala, Paul Armsworth, Michael McCarthy, Alana Moore, José Lahoz-Monfort]
+.font120[Heini Kujala, Cindy Hauser, Paul Armsworth, Michael McCarthy, Alana Moore, José Lahoz-Monfort]
 
 </br>
 .center[![thank_you](https://m.popkey.co/eae3e9/L9KlL.gif)]
