@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="author" content="Will Morris" />
     <meta name="date" content="2017-09-19" />
-    <link href="libs/remark-css/example.css" rel="stylesheet" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="voi-seminar.css" type="text/css" />
   </head>
   <body>
@@ -1247,9 +1247,9 @@ EVWOI computationally hard cos you need to cross assess each 1000 plans against 
 
 ---
 background-image: url(http://2.bp.blogspot.com/-5OojQkKBsJs/TfIKkBNVnVI/AAAAAAAABQQ/4YC8Fj2TCPU/s1600/Regent%2Bhoneyeater%2BXanthomyza%2Bphrygia.jpg), url(https://www.uq.edu.au/news/filething/get/125532/Hidden%20Vale%20-%20spotted%20tail%20quoll.jpg), url(http://media.bowerbird.org.au/181/181183-Full800.jpg), url(https://c1.staticflickr.com/1/727/22443858838_21efba93cf_b.jpg), url(http://www.environment.nsw.gov.au/images/animals/sugarGliderLg.jpg), url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Melaleuca_groveana_leaves%2C_flowers_and_fruit.jpg/1200px-Melaleuca_groveana_leaves%2C_flowers_and_fruit.jpg)
-background-size: 305px 350px
+background-size: 405px 350px
 background-repeat: no-repeat
-background-position: 0px 0px, 305px 0px, 610px 0px, 0px 350px, 305px 350px, 610px 350px
+background-position: 0px 0px, 405px 0px, 810px 0px, 0px 350px, 405px 350px, 810px 350px
 
 
 ???
@@ -1623,24 +1623,44 @@ When the risk-averse decision maker is a position of staying with the safe bet o
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
-"countIncrementalSlides": false
+"countIncrementalSlides": false,
+"slideNumberFormat": "",
+"ratio": "16:9"
 });
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
-(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
   }
-});
+})();
 </script>
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
 (function () {
   var script = document.createElement('script');
   script.type = 'text/javascript';
-  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
   if (location.protocol !== 'file:' && /^https?:/.test(script.src))
     script.src  = script.src.replace(/^https?:/, '');
   document.getElementsByTagName('head')[0].appendChild(script);

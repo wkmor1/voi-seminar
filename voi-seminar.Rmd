@@ -11,6 +11,8 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      slideNumberFormat: ""
+      ratio: "16:9"
 ---
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -1294,9 +1296,9 @@ EVWOI computationally hard cos you need to cross assess each 1000 plans against 
 
 ---
 background-image: url(http://2.bp.blogspot.com/-5OojQkKBsJs/TfIKkBNVnVI/AAAAAAAABQQ/4YC8Fj2TCPU/s1600/Regent%2Bhoneyeater%2BXanthomyza%2Bphrygia.jpg), url(https://www.uq.edu.au/news/filething/get/125532/Hidden%20Vale%20-%20spotted%20tail%20quoll.jpg), url(http://media.bowerbird.org.au/181/181183-Full800.jpg), url(https://c1.staticflickr.com/1/727/22443858838_21efba93cf_b.jpg), url(http://www.environment.nsw.gov.au/images/animals/sugarGliderLg.jpg), url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Melaleuca_groveana_leaves%2C_flowers_and_fruit.jpg/1200px-Melaleuca_groveana_leaves%2C_flowers_and_fruit.jpg)
-background-size: 305px 350px
+background-size: 405px 350px
 background-repeat: no-repeat
-background-position: 0px 0px, 305px 0px, 610px 0px, 0px 350px, 305px 350px, 610px 350px
+background-position: 0px 0px, 405px 0px, 810px 0px, 0px 350px, 405px 350px, 810px 350px
 
 
 ???
